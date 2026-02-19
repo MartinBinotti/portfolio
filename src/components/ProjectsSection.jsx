@@ -36,9 +36,9 @@
                                 A complete e-commerce platform with payment integration and advanced inventory management.
                             </p>
                             <div className="project-tags">
-                                <span className="tag">React</span>
-                                <span className="tag">Node.js</span>
-                                <span className="tag">MongoDB</span>
+                                <span className="tag">Wordpress</span>
+                                <span className="tag">Woocommerce</span>
+                                <span className="tag">Elementor</span>
                             </div>
                         </div>
                     </div>
@@ -60,14 +60,14 @@
                             </div>
                         </div>
                         <div className="project-content">
-                            <h3 className="project-title" data-text-en="Task Management App">Task Management App</h3>
+                            <h3 className="project-title" data-text-en="Employes Intranet">Employes Intranet</h3>
                             <p className="project-description" data-text-en="A web application for task management with real-time synchronization and modern design.">
                                 A web application for task management with real-time synchronization and modern design.
                             </p>
                             <div className="project-tags">
-                                <span className="tag">React</span>
-                                <span className="tag">Firebase</span>
-                                <span className="tag">TypeScript</span>
+                                <span className="tag">Laravel</span>
+                                <span className="tag">Filament</span>
+                                <span className="tag">Livewire</span>
                             </div>
                         </div>
                     </div>
@@ -89,14 +89,14 @@
                             </div>
                         </div>
                         <div className="project-content">
-                            <h3 className="project-title" data-text-en="Blog Platform">Blog Platform</h3>
-                            <p className="project-description" data-text-en="A modern blog platform with CMS features and beautiful UI design.">
-                                A modern blog platform with CMS features and beautiful UI design.
+                            <h3 className="project-title" data-text-en="Students Ranking">Students Ranking</h3>
+                            <p className="project-description" data-text-en="Ranking system for students in Moodle campus, with features for tracking performance and beautiful UI.">
+                                Ranking system for students in Moodle campus, with features for tracking performance and beautiful UI.
                             </p>
                             <div className="project-tags">
-                                <span className="tag">Next.js</span>
-                                <span className="tag">Prisma</span>
-                                <span className="tag">PostgreSQL</span>
+                                <span className="tag">PHP</span>
+                                <span className="tag">Javascript</span>
+                                <span className="tag">Moodle</span>
                             </div>
                         </div>
                     </div>

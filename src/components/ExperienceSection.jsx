@@ -18,38 +18,38 @@
                         <div className="timeline-marker"></div>
                         <div className="timeline-content">
                             <div className="timeline-header">
-                                <div className="timeline-year">2022 - Present</div>
-                                <div className="timeline-badge">Current</div>
+                                <div className="timeline-year" data-text-en="2022 - Present">2022 - Present</div>
+                                <div className="timeline-badge" data-text-en="Current">Current</div>
                             </div>
                             <h3 className="timeline-title" data-text-en="Senior Full Stack Developer">Senior Full Stack Developer</h3>
                             <div className="timeline-company">
                                 <i className="fas fa-building"></i>
-                                Tech Company Inc.
+                                Panamerican Sales Institute SL
                             </div>
-                            <p className="timeline-description" data-text-en="Leading a team of developers in building complex web applications using React and Node.js. Developing advanced user interfaces and optimizing performance. Implementing microservices architecture and CI/CD pipelines.">
-                                Leading a team of developers in building complex web applications using React and Node.js. Developing advanced user interfaces and optimizing performance. Implementing microservices architecture and CI/CD pipelines.
+                            <p className="timeline-description" data-text-en="Leading a team of developers in building complex web applications using PHP on the ecosystem of Wordpress and Moodle. Developing advanced user interfaces and optimizing performance. Implementing new technologies and best practices in web development.">
+                                Leading a team of developers in building complex web applications using PHP on the ecosystem of Wordpress and Moodle. Developing advanced user interfaces and optimizing performance. Implementing new technologies and best practices in web development.
                             </p>
                             <div className="timeline-achievements">
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Led team of 5 developers">Led team of 5 developers</span>
+                                    <span data-text-en="Lead team of developers">Lead team of developers</span>
                                 </div>
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Improved performance by 40%">Improved performance by 40%</span>
+                                    <span data-text-en="Development and optimization of web applications">Development and optimization of web applications</span>
                                 </div>
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Deployed 20+ production apps">Deployed 20+ production apps</span>
+                                    <span data-text-en="Deployed production apps and plugins">Deployed production apps and plugins</span>
                                 </div>
                             </div>
                             <div className="timeline-tags">
-                                <span className="tag">React</span>
-                                <span className="tag">Node.js</span>
-                                <span className="tag">TypeScript</span>
-                                <span className="tag">MongoDB</span>
-                                <span className="tag">Docker</span>
-                                <span className="tag">AWS</span>
+                                <span className="tag">PHP</span>
+                                <span className="tag">Moodle</span>
+                                <span className="tag">Wordpress</span>
+                                <span className="tag">API connection</span>
+                                <span className="tag">Mysql</span>
+                                <span className="tag">Payments</span>
                             </div>
                         </div>
                     </div>
@@ -60,30 +60,35 @@
                             <div className="timeline-header">
                                 <div className="timeline-year">2020 - 2022</div>
                             </div>
-                            <h3 className="timeline-title" data-text-en="Frontend Developer">Frontend Developer</h3>
+                            <h3 className="timeline-title" data-text-en="Full Stack Developer">Full Stack Developer</h3>
                             <div className="timeline-company">
                                 <i className="fas fa-building"></i>
-                                Digital Solutions
+                                De Barricas SL
                             </div>
-                            <p className="timeline-description" data-text-en="Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs.">
-                                Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs.
+                            <p className="timeline-description" data-text-en="Developed two full e-commerce websites using PHP, WordPress, woocommerce and VTEX. Worked on improving user experience and performance optimization to sales. Collaborated with designers to implement responsive designs and UX experience to adapted the projects to the needs of the clients and users.">
+                                Developed two full e-commerce websites using PHP, WordPress, woocommerce and VTEX. Worked on improving user experience and performance optimization to sales. Collaborated with designers to implement responsive designs and UX experience to adapted the projects to the needs of the clients and users.
                             </p>
                             <div className="timeline-achievements">
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Built 15+ responsive websites">Built 15+ responsive websites</span>
+                                    <span data-text-en="Built 2 responsive full e-commerce websites">Built 2 responsive full e-commerce websites</span>
                                 </div>
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Reduced load time by 50%">Reduced load time by 50%</span>
+                                    <span data-text-en="Upgrade SEO performance. Optimization of resources.">Upgrade SEO performance. Optimization of resources.</span>
+                                </div>
+                                <div className="achievement-item">
+                                    <i className="fas fa-check-circle"></i>
+                                    <span data-text-en="Reporting system and analytics upgrade">Reporting system and analytics upgrade</span>
                                 </div>
                             </div>
                             <div className="timeline-tags">
-                                <span className="tag">React</span>
-                                <span className="tag">Vue.js</span>
-                                <span className="tag">JavaScript</span>
+                                <span className="tag">PHP</span>
+                                <span className="tag">Javascript</span>
+                                <span className="tag">Wordpress</span>
                                 <span className="tag">SASS</span>
-                                <span className="tag">Webpack</span>
+                                <span className="tag">VTEX</span>
+                                <span className="tag">E-commerce</span>
                             </div>
                         </div>
                     </div>
@@ -94,10 +99,10 @@
                             <div className="timeline-header">
                                 <div className="timeline-year">2018 - 2020</div>
                             </div>
-                            <h3 className="timeline-title" data-text-en="Junior Developer">Junior Developer</h3>
+                            <h3 className="timeline-title" data-text-en="Webmaster">Webmaster</h3>
                             <div className="timeline-company">
                                 <i className="fas fa-building"></i>
-                                Creative Studio
+                                Brincar por un autismo feliz
                             </div>
                             <p className="timeline-description" data-text-en="Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies.">
                                 Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies.
@@ -105,19 +110,24 @@
                             <div className="timeline-achievements">
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Completed 30+ projects">Completed 30+ projects</span>
+                                    <span data-text-en="Built full E-commerce website linked to E-Learning on Moodle">Built full E-commerce website linked to E-Learning on Moodle</span>
                                 </div>
                                 <div className="achievement-item">
                                     <i className="fas fa-check-circle"></i>
-                                    <span data-text-en="Learned modern frameworks">Learned modern frameworks</span>
+                                    <span data-text-en="Wordpress development on themes and plugins management">Wordpress development on themes and plugins management</span>
+                                </div>
+                                <div className="achievement-item">
+                                    <i className="fas fa-check-circle"></i>
+                                    <span data-text-en="Moodle configuration and customization, course management and users support">Moodle configuration and customization, course management and users support</span>
                                 </div>
                             </div>
                             <div className="timeline-tags">
-                                <span className="tag">HTML</span>
-                                <span className="tag">CSS</span>
-                                <span className="tag">JavaScript</span>
-                                <span className="tag">jQuery</span>
-                                <span className="tag">Bootstrap</span>
+                                <span className="tag">HTML5</span>
+                                <span className="tag">CSS3</span>
+                                <span className="tag">Moodle</span>
+                                <span className="tag">Wordpress</span>
+                                <span className="tag">WooCommerce</span>
+                                <span className="tag">Streaming</span>
                             </div>
                         </div>
                     </div>
