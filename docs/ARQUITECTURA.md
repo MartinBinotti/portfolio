@@ -119,10 +119,3 @@ El proyecto es una SPA de portfolio personal montada con React + Vite. La UI est
 - No hay tests ni lint para detectar regresiones tempranas.
 - Dependencia CDN para Anime.js y Font Awesome (si falla red, se degrada UX).
 
-## 7. Evolucion recomendada
-
-- Migrar interacciones gradualmente a hooks React para reducir acoplamiento DOM.
-- Extraer contenido (experiencia/proyectos) a JSON o CMS.
-- Agregar `eslint`, `prettier`, `vitest` y pipeline CI.
-- Implementar endpoint de contacto con proteccion anti-spam.
-
