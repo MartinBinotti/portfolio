@@ -86,15 +86,4 @@ Este documento detalla cada componente React del proyecto, su responsabilidad y 
 
 - Todos los componentes dependen del contrato CSS en `src/styles/style.css`.
 - Varios componentes exponen IDs/clases que `src/scripts/app.js` necesita para funcionar.
-- Si cambias IDs o clases clave, actualiza tambien `app.js`.
-
-## Checklist al modificar componentes
-
-- Verificar que no se rompan selectores usados en `app.js`.
-- Mantener atributos `data-text-en`/`data-placeholder-en` para i18n.
-- Confirmar comportamiento responsive en breakpoints (1024/768/480/360).
-- Si agregas seccion nueva:
-  - sumar link en `Header.jsx`
-  - agregar bloque JSX en `App.jsx`
-  - revisar scroll spy y animaciones si aplica.
 
