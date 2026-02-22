@@ -20,7 +20,13 @@
               <div className="project-image">
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href="#" className="project-link" title="View Project">
+                    <a
+                      href="https://vimeo.com/1167125855?share=copy&fl=sv&fe=ci"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
                       <i className="fas fa-external-link-alt"></i>
                     </a>
                     <a href="#" className="project-link" title="View Code">
@@ -55,10 +61,16 @@
               <div className="project-image">
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href="#" className="project-link" title="View Project">
+                    <a
+                      href="https://vimeo.com/1167125855?share=copy&fl=sv&fe=ci"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
                       <i className="fas fa-external-link-alt"></i>
                     </a>
-                    <a href="#" className="project-link" title="View Code">
+                    <a href="https://github.com/MartinBinotti/intranet-filament" target="_blank" rel="noreferrer" className="project-link" title="View Code">
                       <i className="fab fa-github"></i>
                     </a>
                   </div>
@@ -68,15 +80,20 @@
                 </div>
               </div>
               <div className="project-content">
-                <h3 className="project-title" data-text-en="Employes Intranet">
-                  Employes Intranet
+                <h3
+                  className="project-title"
+                  data-text-en="Employees Intranet"
+                  data-text-es="Intranet de Empleados"
+                >
+                  Intranet de Empleados
                 </h3>
                 <p
                   className="project-description"
-                  data-text-en="A web application for task management with real-time synchronization and modern design."
+                  data-text-en="Web application developed with Laravel/Filament. CRUD for users and employees, with intranet features under development."
+                  data-text-es="Aplicacion web desarrollada con Laravel/Filament. CRUD de usuarios, empleados y funciones en desarrollo de la intranet."
                 >
-                  A web application for task management with real-time synchronization and modern
-                  design.
+                  Aplicacion web desarrollada con Laravel/Filament. CRUD de usuarios, empleados y
+                  funciones en desarrollo de la intranet.
                 </p>
                 <div className="project-tags">
                   <span className="tag">Laravel</span>
@@ -90,10 +107,16 @@
               <div className="project-image">
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href="#" className="project-link" title="View Project">
+                    <a
+                      href="https://vimeo.com/1167124981?share=copy&fl=sv&fe=ci"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
                       <i className="fas fa-external-link-alt"></i>
                     </a>
-                    <a href="#" className="project-link" title="View Code">
+                    <a href="https://github.com/MartinBinotti/ranking-moodle" target="_blank" rel="noreferrer" className="project-link" title="View Code">
                       <i className="fab fa-github"></i>
                     </a>
                   </div>
@@ -103,15 +126,20 @@
                 </div>
               </div>
               <div className="project-content">
-                <h3 className="project-title" data-text-en="Students Ranking">
-                  Students Ranking
+                <h3
+                  className="project-title"
+                  data-text-en="Students Ranking"
+                  data-text-es="Ranking de Estudiantes"
+                >
+                  Ranking de Estudiantes
                 </h3>
                 <p
                   className="project-description"
                   data-text-en="Ranking system for students in Moodle campus, with features for tracking performance and beautiful UI."
+                  data-text-es="Sistema de ranking para estudiantes en campus Moodle, con funcionalidades para seguimiento del rendimiento y una interfaz atractiva."
                 >
-                  Ranking system for students in Moodle campus, with features for tracking
-                  performance and beautiful UI.
+                  Sistema de ranking para estudiantes en campus Moodle, con funcionalidades para
+                  seguimiento del rendimiento y una interfaz atractiva.
                 </p>
                 <div className="project-tags">
                   <span className="tag">PHP</span>
