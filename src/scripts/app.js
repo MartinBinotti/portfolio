@@ -114,7 +114,6 @@ function initializeApp() {
   initTheme();
   initNavigation();
   initScrollEffects();
-  initFormHandlers();
   initMobileMenu();
   updateLanguageUI();
   updateThemeUI();
@@ -336,26 +335,6 @@ function initScrollEffects() {
 
   const sections = document.querySelectorAll('.section');
   sections.forEach((section) => observer.observe(section));
-}
-
-function initFormHandlers() {
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', handleFormSubmit);
-  }
-}
-
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData);
-  console.log('Form submitted:', data);
-
-  const message =
-    AppState.currentLang === 'es' ? 'Mensaje enviado correctamente!' : 'Message sent successfully!';
-
-  alert(message);
-  e.target.reset();
 }
 
 function initMobileMenu() {
@@ -867,26 +846,15 @@ function initContactAnimations() {
 }
 
 function initParallax() {
-  const profileImage = document.getElementById('profileImage');
-  if (!profileImage) return;
+  const gridBg = document.querySelector('.code-grid-bg');
+  if (!gridBg) return;
 
   let ticking = false;
   window.addEventListener('scroll', () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         const scrolled = window.pageYOffset;
-        const parallaxSpeed = 0.3;
-        const maxOffset = 100;
-        const offset = Math.min(scrolled * parallaxSpeed, maxOffset);
-
-        if (profileImage) {
-          profileImage.style.transform = `translateY(${offset}px)`;
-        }
-
-        const gridBg = document.querySelector('.code-grid-bg');
-        if (gridBg) {
-          gridBg.style.transform = `translateY(${scrolled * 0.2}px)`;
-        }
+        gridBg.style.transform = `translateY(${scrolled * 0.2}px)`;
 
         ticking = false;
       });

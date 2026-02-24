@@ -20,15 +20,9 @@
               <div className="project-image">
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a
-                      href="https://vimeo.com/1167125855?share=copy&fl=sv&fe=ci"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="project-link"
-                      title="View Project"
-                    >
+                    <span className="project-link project-link-static" title="Private Project">
                       <i className="fas fa-external-link-alt"></i>
-                    </a>
+                    </span>
                     <a href="#" className="project-link" title="View Code">
                       <i className="fab fa-github"></i>
                     </a>

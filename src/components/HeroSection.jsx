@@ -1,4 +1,6 @@
-﻿function HeroSection() {
+﻿import profileImageSrc from '../assets/perfil.jpg';
+
+function HeroSection() {
   return (
     <>
       <section id="home" className="hero-section">
@@ -50,6 +52,10 @@
                 <span data-text-en="View Projects">View Projects</span>
                 <i className="fas fa-code"></i>
               </a>
+              <a href="/cv-martin-binotti.pdf" className="btn btn-secondary" download>
+                <span>Download CV</span>
+                <i className="fas fa-download"></i>
+              </a>
             </div>
 
             <div className="hero-social">
@@ -84,11 +90,12 @@
             <div className="hero-image-container">
               <div className="profile-image-glow"></div>
               <div className="profile-image-frame">
-                <div className="profile-image" id="profileImage">
-                  <div className="profile-placeholder">
-                    <i className="fas fa-code"></i>
-                  </div>
-                </div>
+                <img
+                  src={profileImageSrc}
+                  alt="Martin Augusto Binotti"
+                  className="profile-image"
+                  id="profileImage"
+                />
               </div>
               <div className="floating-badge badge-1">
                 <i className="fab fa-laravel"></i>
