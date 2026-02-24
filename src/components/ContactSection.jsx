@@ -14,6 +14,9 @@ function ContactSection() {
   const formStartTimeRef = useRef(Date.now());
   const lastSubmitTimeRef = useRef(0);
   const [formData, setFormData] = useState(INITIAL_FORM);
+  const [touched, setTouched] = useState({});
+  const [fieldErrors, setFieldErrors] = useState({});
+  const [submitAttempted, setSubmitAttempted] = useState(false);
   const [status, setStatus] = useState('idle');
   const [errorType, setErrorType] = useState('send');
   const isSpanish = document.documentElement.lang === 'es';
@@ -28,15 +31,70 @@ function ContactSection() {
     return undefined;
   }, [status]);
 
+  const validateField = (name, value) => {
+    const trimmed = value.trim();
+    if (name === 'from_name') {
+      if (!trimmed) return isSpanish ? 'El nombre es obligatorio.' : 'Name is required.';
+      if (trimmed.length < 2) return isSpanish ? 'Minimo 2 caracteres.' : 'Minimum 2 characters.';
+      return '';
+    }
+    if (name === 'from_email') {
+      if (!trimmed) return isSpanish ? 'El email es obligatorio.' : 'Email is required.';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+        return isSpanish ? 'Introduce un email valido.' : 'Enter a valid email.';
+      }
+      return '';
+    }
+    if (name === 'subject') {
+      if (!trimmed) return isSpanish ? 'El asunto es obligatorio.' : 'Subject is required.';
+      if (trimmed.length < 3) return isSpanish ? 'Minimo 3 caracteres.' : 'Minimum 3 characters.';
+      return '';
+    }
+    if (name === 'message') {
+      if (!trimmed) return isSpanish ? 'El mensaje es obligatorio.' : 'Message is required.';
+      if (trimmed.length < 10) {
+        return isSpanish ? 'Escribe al menos 10 caracteres.' : 'Please enter at least 10 characters.';
+      }
+      return '';
+    }
+    return '';
+  };
+
+  const validateForm = () => ({
+    from_name: validateField('from_name', formData.from_name),
+    from_email: validateField('from_email', formData.from_email),
+    subject: validateField('subject', formData.subject),
+    message: validateField('message', formData.message),
+  });
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (touched[name] || submitAttempted) {
+      setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
+    }
+  };
+
+  const handleFieldBlur = (event) => {
+    const { name, value } = event.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
+    setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setSubmitAttempted(true);
     setStatus('loading');
     setErrorType('send');
+
+    const nextErrors = validateForm();
+    setFieldErrors(nextErrors);
+    const hasErrors = Object.values(nextErrors).some(Boolean);
+    if (hasErrors) {
+      setStatus('error');
+      setErrorType('validation');
+      return;
+    }
 
     const now = Date.now();
     const elapsed = now - formStartTimeRef.current;
@@ -64,6 +122,9 @@ function ContactSection() {
       lastSubmitTimeRef.current = now;
       formStartTimeRef.current = Date.now();
       setFormData(INITIAL_FORM);
+      setTouched({});
+      setFieldErrors({});
+      setSubmitAttempted(false);
     } catch (error) {
       console.error('EmailJS sendForm failed:', error);
       setErrorType('send');
@@ -166,10 +227,18 @@ function ContactSection() {
                   data-placeholder-en="Name"
                   value={formData.from_name}
                   onChange={handleInputChange}
+                  onBlur={handleFieldBlur}
                   required
                   maxLength={120}
+                  aria-invalid={Boolean(fieldErrors.from_name)}
+                  aria-describedby="from_name_error"
                 />
                 <input type="hidden" name="user_name" value={formData.from_name} readOnly />
+                {(touched.from_name || submitAttempted) && fieldErrors.from_name && (
+                  <p className="field-error" id="from_name_error">
+                    {fieldErrors.from_name}
+                  </p>
+                )}
               </div>
               <div className="form-group">
                 <input
@@ -180,10 +249,18 @@ function ContactSection() {
                   data-placeholder-en="Email"
                   value={formData.from_email}
                   onChange={handleInputChange}
+                  onBlur={handleFieldBlur}
                   required
                   maxLength={180}
+                  aria-invalid={Boolean(fieldErrors.from_email)}
+                  aria-describedby="from_email_error"
                 />
                 <input type="hidden" name="user_email" value={formData.from_email} readOnly />
+                {(touched.from_email || submitAttempted) && fieldErrors.from_email && (
+                  <p className="field-error" id="from_email_error">
+                    {fieldErrors.from_email}
+                  </p>
+                )}
               </div>
               <div className="form-group">
                 <input
@@ -194,9 +271,17 @@ function ContactSection() {
                   data-placeholder-en="Subject"
                   value={formData.subject}
                   onChange={handleInputChange}
+                  onBlur={handleFieldBlur}
                   required
                   maxLength={180}
+                  aria-invalid={Boolean(fieldErrors.subject)}
+                  aria-describedby="subject_error"
                 />
+                {(touched.subject || submitAttempted) && fieldErrors.subject && (
+                  <p className="field-error" id="subject_error">
+                    {fieldErrors.subject}
+                  </p>
+                )}
               </div>
               <div className="form-group">
                 <input
@@ -217,9 +302,17 @@ function ContactSection() {
                   data-placeholder-en="Message"
                   value={formData.message}
                   onChange={handleInputChange}
+                  onBlur={handleFieldBlur}
                   required
                   maxLength={3000}
+                  aria-invalid={Boolean(fieldErrors.message)}
+                  aria-describedby="message_error"
                 />
+                {(touched.message || submitAttempted) && fieldErrors.message && (
+                  <p className="field-error" id="message_error">
+                    {fieldErrors.message}
+                  </p>
+                )}
               </div>
 
               <button type="submit" className="btn btn-primary btn-submit" disabled={status === 'loading'}>
@@ -257,6 +350,10 @@ function ContactSection() {
                       ? isSpanish
                         ? 'No se pudo validar el envio. Espera unos segundos e intentalo de nuevo.'
                         : 'The request could not be validated. Wait a few seconds and try again.'
+                      : errorType === 'validation'
+                        ? isSpanish
+                          ? 'Revisa los campos marcados e intentalo de nuevo.'
+                          : 'Please review the highlighted fields and try again.'
                       : errorType === 'config'
                         ? isSpanish
                           ? 'Falta configurar EmailJS. Revisa las variables de entorno.'

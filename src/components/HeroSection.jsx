@@ -1,4 +1,5 @@
-﻿import profileImageSrc from '../assets/perfil.jpg';
+﻿import cvFileSrc from '../assets/cv-martin-binotti.pdf';
+import profileImageSrc from '../assets/perfil.webp';
 
 function HeroSection() {
   return (
@@ -49,10 +50,10 @@ function HeroSection() {
                 <i className="fas fa-arrow-right"></i>
               </a>
               <a href="#projects" className="btn btn-secondary">
-                <span data-text-en="View Projects">View Projects</span>
+                <span data-text-en="View Projects">Explore Projects</span>
                 <i className="fas fa-code"></i>
               </a>
-              <a href="/cv-martin-binotti.pdf" className="btn btn-secondary" download>
+              <a href={cvFileSrc} className="btn btn-tertiary" download="cv-martin-binotti.pdf">
                 <span>Download CV</span>
                 <i className="fas fa-download"></i>
               </a>
@@ -95,6 +96,11 @@ function HeroSection() {
                   alt="Martin Augusto Binotti"
                   className="profile-image"
                   id="profileImage"
+                  width="512"
+                  height="512"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                 />
               </div>
               <div className="floating-badge badge-1">

@@ -26,6 +26,13 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-border-soft: rgba(255, 255, 255, 0.08);
   --glass-inner-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(10, 14, 39, 0.3);
+  --header-bg-scrolled: rgba(10, 14, 39, 0.42);
+  --header-border: rgba(255, 255, 255, 0.045);
+  --header-inner-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --header-scrolled-shadow: 0 8px 24px rgba(2, 6, 23, 0.18);
+  --nav-mobile-bg: rgba(10, 14, 39, 0.7);
+  --nav-mobile-border: rgba(255, 255, 255, 0.08);
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
@@ -47,6 +54,27 @@
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-muted: #9ca3af;
+  --header-bg: rgba(255, 255, 255, 0.34);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.42);
+  --header-border: rgba(255, 255, 255, 0.22);
+  --header-inner-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  --header-scrolled-shadow: 0 6px 18px rgba(148, 163, 184, 0.08);
+  --nav-mobile-bg: rgba(255, 255, 255, 0.64);
+  --nav-mobile-border: rgba(255, 255, 255, 0.26);
+}
+
+[data-theme='light'] .main-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: var(--header-inner-shadow);
+}
+
+[data-theme='light'] .main-header.scrolled {
+  background: var(--header-bg-scrolled);
+}
+
+[data-theme='light'] .nav-link {
+  color: var(--text-primary);
 }
 
 [dir='rtl'] {
@@ -226,18 +254,18 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(10, 14, 39, 0.45);
+  background: var(--header-bg);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
-  border-bottom: 1px solid var(--glass-border-soft);
-  box-shadow: var(--glass-inner-shadow);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: var(--header-inner-shadow);
   z-index: 1000;
   transition: all var(--transition);
 }
 
 .main-header.scrolled {
-  background: rgba(10, 14, 39, 0.6);
-  box-shadow: var(--shadow-md);
+  background: var(--header-bg-scrolled);
+  box-shadow: var(--header-scrolled-shadow);
 }
 
 .nav-container {
@@ -621,6 +649,25 @@ img {
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(192, 132, 252, 0.3);
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--glass-border-soft);
+  padding: 0.85rem 1.4rem;
+  font-size: 0.95rem;
+}
+
+.btn-tertiary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-tertiary i {
+  font-size: 0.9rem;
 }
 
 .hero-social {
@@ -1348,16 +1395,19 @@ img {
 }
 
 .project-link {
-  width: 50px;
-  height: 50px;
+  min-height: 50px;
+  padding: 0.6rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.45rem;
   background: var(--primary);
   color: white;
-  border-radius: 50%;
+  border-radius: 999px;
   text-decoration: none;
   transition: all var(--transition);
+  font-weight: 700;
+  font-size: 0.85rem;
 }
 
 .project-link {
@@ -1373,6 +1423,10 @@ img {
   opacity: 0.75;
   cursor: default;
   pointer-events: none;
+}
+
+.project-link-label {
+  line-height: 1;
 }
 
 .project-content {
@@ -1513,6 +1567,18 @@ img {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.form-input[aria-invalid='true'] {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.14);
+}
+
+.field-error {
+  margin-top: 0.45rem;
+  color: #fca5a5;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .form-textarea {
@@ -1786,17 +1852,22 @@ img {
     top: 60px;
     left: -100%;
     width: 100%;
-    background: rgba(10, 14, 39, 0.7);
+    background: var(--nav-mobile-bg);
     backdrop-filter: blur(20px) saturate(160%);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     flex-direction: column;
     padding: 2rem 1rem;
-    border-top: 1px solid var(--glass-border-soft);
+    border-top: 1px solid var(--nav-mobile-border);
     box-shadow: var(--glass-inner-shadow);
     transition: left var(--transition);
     z-index: 999;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
+  }
+
+  [data-theme='light'] .nav-menu {
+    background: var(--nav-mobile-bg);
+    border-top: 1px solid var(--nav-mobile-border);
   }
 
   .nav-menu.active {

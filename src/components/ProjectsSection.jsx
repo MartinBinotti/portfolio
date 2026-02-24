@@ -22,9 +22,11 @@
                   <div className="project-links">
                     <span className="project-link project-link-static" title="Private Project">
                       <i className="fas fa-external-link-alt"></i>
+                      <span className="project-link-label">Private</span>
                     </span>
                     <a href="#" className="project-link" title="View Code">
                       <i className="fab fa-github"></i>
+                      <span className="project-link-label">Code</span>
                     </a>
                   </div>
                 </div>
@@ -63,9 +65,11 @@
                       title="View Project"
                     >
                       <i className="fas fa-external-link-alt"></i>
+                      <span className="project-link-label">Demo</span>
                     </a>
                     <a href="https://github.com/MartinBinotti/intranet-filament" target="_blank" rel="noreferrer" className="project-link" title="View Code">
                       <i className="fab fa-github"></i>
+                      <span className="project-link-label">Code</span>
                     </a>
                   </div>
                 </div>
@@ -109,9 +113,11 @@
                       title="View Project"
                     >
                       <i className="fas fa-external-link-alt"></i>
+                      <span className="project-link-label">Demo</span>
                     </a>
                     <a href="https://github.com/MartinBinotti/ranking-moodle" target="_blank" rel="noreferrer" className="project-link" title="View Code">
                       <i className="fab fa-github"></i>
+                      <span className="project-link-label">Code</span>
                     </a>
                   </div>
                 </div>
