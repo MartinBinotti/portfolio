@@ -20,11 +20,23 @@
               <div className="project-image">
                 <div className="project-overlay">
                   <div className="project-links">
-                    <span className="project-link project-link-static" title="Private Project">
+                    <a
+                      href="https://asphalt-zeta.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
                       <i className="fas fa-external-link-alt"></i>
-                      <span className="project-link-label">Private</span>
-                    </span>
-                    <a href="#" className="project-link" title="View Code">
+                      <span className="project-link-label">Demo</span>
+                    </a>
+                    <a
+                      href="https://github.com/MartinBinotti/asphalt.git"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Code"
+                    >
                       <i className="fab fa-github"></i>
                       <span className="project-link-label">Code</span>
                     </a>
@@ -35,20 +47,21 @@
                 </div>
               </div>
               <div className="project-content">
-                <h3 className="project-title" data-text-en="E-Commerce Platform">
-                  E-Commerce Platform
+                <h3 className="project-title" data-text-en="Asphalt E-Commerce" data-text-es="Asphalt E-Commerce">
+                  Asphalt E-Commerce
                 </h3>
                 <p
                   className="project-description"
-                  data-text-en="A complete e-commerce platform with payment integration and advanced inventory management."
+                  data-text-en="Skateboarding e-commerce for Asphalt brand with modern shopping flow and product-driven UI."
+                  data-text-es="E-commerce de skateboarding para la marca Asphalt, con flujo de compra moderno y UI centrada en productos."
                 >
-                  A complete e-commerce platform with payment integration and advanced inventory
-                  management.
+                  E-commerce de skateboarding para la marca Asphalt, con flujo de compra moderno y
+                  UI centrada en productos.
                 </p>
                 <div className="project-tags">
-                  <span className="tag">Wordpress</span>
-                  <span className="tag">Woocommerce</span>
-                  <span className="tag">Elementor</span>
+                  <span className="tag">E-Commerce</span>
+                  <span className="tag">Skateboarding</span>
+                  <span className="tag">Vercel</span>
                 </div>
               </div>
             </div>
