@@ -21,6 +21,54 @@
                 <div className="project-overlay">
                   <div className="project-links">
                     <a
+                      href="https://fashion-designer-steel.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
+                      <i className="fas fa-external-link-alt"></i>
+                      <span className="project-link-label">Demo</span>
+                    </a>
+                    <a href="https://github.com/MartinBinotti/fashion-designer.git" target="_blank" rel="noreferrer" className="project-link" title="View Code">
+                      <i className="fab fa-github"></i>
+                      <span className="project-link-label">Code</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="project-placeholder">
+                  <i className="fas fa-shirt"></i>
+                </div>
+              </div>
+              <div className="project-content">
+                <h3
+                  className="project-title"
+                  data-text-en="Fashion Designer Portfolio"
+                  data-text-es="Portfolio Fashion Designer"
+                >
+                  Portfolio Fashion Designer
+                </h3>
+                <p
+                  className="project-description"
+                  data-text-en="Portfolio website for a fashion designer, focused on visual identity, collections, and creative direction."
+                  data-text-es="Sitio portfolio para una fashion designer, enfocado en identidad visual, colecciones y direccion creativa."
+                >
+                  Sitio portfolio para una fashion designer, enfocado en identidad visual, colecciones y
+                  direccion creativa.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Portfolio</span>
+                  <span className="tag">Fashion</span>
+                  <span className="tag">UI</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a
                       href="https://asphalt-zeta.vercel.app"
                       target="_blank"
                       rel="noreferrer"
@@ -161,6 +209,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
