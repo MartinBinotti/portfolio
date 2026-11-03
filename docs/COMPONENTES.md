@@ -2,12 +2,6 @@
 
 Este documento detalla cada componente React del proyecto, su responsabilidad y sus dependencias.
 
-## `src/components/Loader.jsx`
-
-- Renderiza la pantalla inicial de carga.
-- Incluye texto estilo codigo, spinner, barra y porcentaje.
-- La animacion real de progreso/salida se controla desde `src/scripts/app.js` (`initLoaderAnimation`).
-- Por que existe: mejorar percepcion de carga y reforzar identidad visual.
 
 ## `src/components/Header.jsx`
 

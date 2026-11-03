@@ -32,27 +32,27 @@
 
               <div className="about-stats">
                 <div className="stat-item">
-                  <div className="stat-number" data-count="15">
-                    0
+                  <div className="stat-number" data-count="8" data-suffix="+">
+                    8+
                   </div>
-                  <div className="stat-label" data-text-en="Projects">
-                    Projects
-                  </div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number" data-count="5">
-                    0
-                  </div>
-                  <div className="stat-label" data-text-en="Years Experience">
-                    Years Experience
+                  <div className="stat-label" data-text-en="Years of experience" data-text-es="Años de experiencia">
+                    Años de experiencia
                   </div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number" data-count="10">
-                    0
+                  <div className="stat-number" data-count="4" data-suffix="">
+                    4
                   </div>
-                  <div className="stat-label" data-text-en="Happy Clients">
-                    Happy Clients
+                  <div className="stat-label" data-text-en="Production websites" data-text-es="Webs en producción">
+                    Webs en producción
+                  </div>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-number" data-count="4" data-suffix="">
+                    4
+                  </div>
+                  <div className="stat-label" data-text-en="Moodle & WP plugins" data-text-es="Plugins Moodle y WP">
+                    Plugins Moodle y WP
                   </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@
                   <div className="code-line indent">
                     <span className="code-property">name</span>
                     <span className="code-operator">:</span>
-                    <span className="code-string">'Full Stack Developer'</span>
+                    <span className="code-string">'Martín Binotti'</span>
                     <span className="code-comma">,</span>
                   </div>
                   <div className="code-line indent">
@@ -88,7 +88,7 @@
                   <div className="code-line indent">
                     <span className="code-property">passion</span>
                     <span className="code-operator">:</span>
-                    <span className="code-string">'CiberSecurity & Continuous learning'</span>
+                    <span className="code-string">'Cybersecurity & continuous learning'</span>
                   </div>
                   <div className="code-line">
                     <span className="code-brace">&#125;</span>

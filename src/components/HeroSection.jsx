@@ -13,48 +13,47 @@ function HeroSection() {
         <div className="hero-container">
           <div className="hero-content">
             <div className="hero-greeting">
-              <span className="greeting-text" data-text-en="Hello, I'm">
-                Hello, I'm
+              <span className="greeting-text" data-text-en="Hello, I'm" data-text-es="Hola, soy">
+                Hola, soy
               </span>
               <span className="greeting-cursor">|</span>
             </div>
 
             <h1 className="hero-name" id="heroName">
-              <span className="name-prefix">const</span>
-              <span className="name-operator">=</span>
-              <span className="name-value">Martin Augusto Binotti</span>
-              <span className="name-suffix">;</span>
+              <span className="name-value">Martín Augusto Binotti</span>
             </h1>
 
             <div className="hero-title">
               <span className="title-prefix">//</span>
               <span
                 className="title-text"
-                data-text-en="Full Stack Web Developer | Web Platforms & E-learning Solution"
+                data-text-en="Senior Full Stack Developer · PHP, Laravel, React & WordPress"
+                data-text-es="Full Stack Developer Senior · PHP, Laravel, React y WordPress"
               >
-                Full Stack Web Developer | Web Platforms & E-learning Solution
+                Full Stack Developer Senior · PHP, Laravel, React y WordPress
               </span>
             </div>
 
             <p
               className="hero-description"
-              data-text-en="Passionate developer creating exceptional digital experiences with modern technologies."
+              data-text-en="Based in Mallorca. I build booking sites, e-commerce, internal tools and e-learning platforms for tourism, hospitality and education."
+              data-text-es="Desde Mallorca. Construyo webs de reservas, e-commerce, herramientas internas y plataformas e-learning para turismo, hostelería y educación."
             >
-              Passionate developer creating exceptional digital experiences with modern
-              technologies.
+              Desde Mallorca. Construyo webs de reservas, e-commerce, herramientas internas y
+              plataformas e-learning para turismo, hostelería y educación.
             </p>
 
             <div className="hero-buttons">
               <a href="#contact" className="btn btn-primary">
-                <span data-text-en="Get In Touch">Get In Touch</span>
+                <span data-text-en="Get in touch" data-text-es="Contáctame">Contáctame</span>
                 <i className="fas fa-arrow-right"></i>
               </a>
               <a href="#projects" className="btn btn-secondary">
-                <span data-text-en="View Projects">Explore Projects</span>
+                <span data-text-en="View projects" data-text-es="Ver proyectos">Ver proyectos</span>
                 <i className="fas fa-code"></i>
               </a>
               <a href={cvFileSrc} className="btn btn-tertiary" download="cv-martin-binotti.pdf">
-                <span>Download CV</span>
+                <span data-text-en="Download CV" data-text-es="Descargar CV">Descargar CV</span>
                 <i className="fas fa-download"></i>
               </a>
             </div>

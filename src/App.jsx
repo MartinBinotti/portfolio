@@ -1,5 +1,4 @@
 ﻿import { useEffect } from 'react';
-import Loader from './components/Loader';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -64,7 +63,6 @@ function App() {
 
   return (
     <>
-      <Loader />
       <Header />
       <main className="main-content">
         <HeroSection />

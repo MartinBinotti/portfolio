@@ -65,7 +65,7 @@ El proyecto es una SPA de portfolio personal montada con React + Vite. La UI est
     - No hay integracion backend actualmente.
   - Efectos visuales:
     - Particulas de fondo.
-    - Loader y animaciones de entrada.
+    - Animaciones de entrada (el hero entra con CSS).
     - Animaciones de skills, timeline, proyectos y estadisticas.
     - Parallax ligero en hero.
   - Por que: concentrar la logica de UX en un unico modulo facilita iterar animaciones sin dispersar listeners en todos los componentes.

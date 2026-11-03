@@ -8,70 +8,19 @@
 
 const ES_TRANSLATIONS = {
   Home: 'Inicio',
-  About: 'Sobre mi',
+  About: 'Sobre mí',
   Skills: 'Habilidades',
   Experience: 'Experiencia',
   Projects: 'Proyectos',
   Contact: 'Contacto',
   LinkedIn: 'LinkedIn',
   GitHub: 'GitHub',
-  "Hello, I'm": 'Hola, soy',
-  'Full Stack Web Developer | Web Platforms & E-learning Solution':
-    'Desarrollador Web Full Stack | Plataformas Web y Soluciones de E-learning',
-  'Passionate developer creating exceptional digital experiences with modern technologies.':
-    'Desarrollador apasionado creando experiencias digitales excepcionales con tecnologias modernas.',
-  'Get In Touch': 'Contactame',
-  'View Projects': 'Ver proyectos',
-  'Scroll Down': 'Desplazate hacia abajo',
-  'About Me': 'Sobre mi',
+  'Scroll Down': 'Desliza hacia abajo',
+  'About Me': 'Sobre mí',
   'I am a Full Stack Developer focused on building and implementing web systems and e-learning platforms using PHP, Laravel, JavaScript, HTML, CSS3, MySQL/MariaDB, WordPress, VTEX and Moodle. I work across development, layout implementation, content and server management, and I apply cybersecurity best practices while continuously strengthening React, Vue.js and Python.':
-    'Soy un desarrollador Full Stack enfocado en construir e implementar sistemas web y plataformas de e-learning usando PHP, Laravel, JavaScript, HTML, CSS3, MySQL/MariaDB, WordPress, VTEX y Moodle. Trabajo tanto en desarrollo como en maquetado, actualizacion de contenidos y gestion de servidores, aplicando buenas practicas de ciberseguridad mientras sigo fortaleciendo React, Vue.js y Python.',
-  Projects: 'Proyectos',
-  'Years Experience': 'Anios de experiencia',
-  'Happy Clients': 'Clientes satisfechos',
-  Frontend: 'Frontend',
-  Backend: 'Backend',
-  'Tools & Others': 'Herramientas y otros',
-  'Soft Skills': 'Habilidades Blandas',
-  'Problem Solving': 'Resolucion de problemas',
-  'Effective Communication': 'Comunicacion efectiva',
-  Empathy: 'Empatia',
-  'Adaptability / Learning Ability': 'Adaptabilidad / Capacidad de aprendizaje',
-  'Senior Full Stack Developer': 'Desarrollador Full Stack Senior',
-  'Frontend Developer': 'Desarrollador Frontend',
-  'Junior Developer': 'Desarrollador Junior',
-  'Leading a team of developers in building complex web applications using React and Node.js. Developing advanced user interfaces and optimizing performance. Implementing microservices architecture and CI/CD pipelines.':
-    'Liderando un equipo para construir aplicaciones web complejas con React y Node.js, optimizando rendimiento e implementando CI/CD.',
-  'Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs.':
-    'Desarrolle interfaces interactivas con React y Vue.js, mejorando experiencia de usuario y rendimiento.',
-  'Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies.':
-    'Desarrolle sitios con HTML, CSS y JavaScript, aplicando buenas practicas en proyectos reales.',
-  'Led team of 5 developers': 'Lidere un equipo de 5 desarrolladores',
-  'Improved performance by 40%': 'Mejore el rendimiento en un 40%',
-  'Deployed 20+ production apps': 'Implemente mas de 20 apps en produccion',
-  'Built 15+ responsive websites': 'Construi mas de 15 sitios responsivos',
-  'Reduced load time by 50%': 'Reduje el tiempo de carga en un 50%',
-  'Completed 30+ projects': 'Complete mas de 30 proyectos',
-  'Learned modern frameworks': 'Aprendi frameworks modernos',
-  'E-Commerce Platform': 'Plataforma E-Commerce',
-  'Task Management App': 'App de Gestion de Tareas',
-  'Blog Platform': 'Plataforma de Blog',
-  'A complete e-commerce platform with payment integration and advanced inventory management.':
-    'Una plataforma e-commerce completa con integracion de pagos y gestion avanzada de inventario.',
-  'A web application for task management with real-time synchronization and modern design.':
-    'Aplicacion web para gestion de tareas con sincronizacion en tiempo real y diseno moderno.',
-  'A modern blog platform with CMS features and beautiful UI design.':
-    'Plataforma de blog moderna con funciones CMS y una interfaz cuidada.',
-  '2026 - Present': '2026 - Actualidad',
-  'Developing and maintaining the group\'s four websites, from catering and food delivery to leisure bookings, and building internal web applications for invoicing and lead management.':
-    'Desarrollo y mantenimiento de las cuatro webs del grupo, desde catering y delivery hasta reservas de ocio, y creacion de aplicaciones web internas para facturacion y gestion de leads.',
-  'Management of 4 production websites': 'Gestion de 4 sitios web en produccion',
-  'Internal web apps for invoicing and leads': 'Aplicaciones web internas de facturacion y leads',
-  'Booking, payment and ERP integrations': 'Integraciones de reservas, pagos y ERP',
+    'Soy desarrollador Full Stack, enfocado en construir e implementar sistemas web y plataformas de e-learning con PHP, Laravel, JavaScript, HTML, CSS3, MySQL/MariaDB, WordPress, VTEX y Moodle. Trabajo tanto en desarrollo como en maquetación, contenidos y gestión de servidores, aplicando buenas prácticas de ciberseguridad mientras sigo reforzando React, Vue.js y Python.',
   Email: 'Correo',
-  Phone: 'Telefono',
-  Location: 'Ubicacion',
-  'Riyadh, Saudi Arabia': 'Riad, Arabia Saudita',
+  Phone: 'Teléfono',
   'Send Message': 'Enviar mensaje',
   by: 'por',
   Name: 'Nombre',
@@ -100,7 +49,7 @@ function normalizeSpanishDataAttributes() {
   textNodes.forEach((element) => {
     const enText = element.getAttribute('data-text-en');
     if (!enText) return;
-    const esText = ES_TRANSLATIONS[enText] || enText;
+    const esText = element.getAttribute('data-text-es') || ES_TRANSLATIONS[enText] || enText;
     element.setAttribute('data-text-es', esText);
   });
 
@@ -452,44 +401,10 @@ function animateElement(element, props, options = {}) {
   });
 }
 
-function initLoaderAnimation() {
-  const loader = document.getElementById('loader');
-  const loaderPercent = document.getElementById('loaderPercent');
-  if (!loader || !loaderPercent) return;
-
-  let progress = 0;
-  const progressInterval = setInterval(() => {
-    progress += Math.random() * 15;
-    if (progress >= 100) {
-      progress = 100;
-      clearInterval(progressInterval);
-      setTimeout(() => {
-        if (typeof anime !== 'undefined') {
-          anime({
-            targets: loader,
-            opacity: [1, 0],
-            duration: 500,
-            easing: 'easeInOutQuad',
-            complete: () => {
-              loader.classList.add('hidden');
-              initPageAnimations();
-            },
-          });
-        } else {
-          loader.classList.add('hidden');
-          initPageAnimations();
-        }
-      }, 300);
-    }
-    if (loaderPercent) {
-      loaderPercent.textContent = Math.floor(progress) + '%';
-    }
-  }, 100);
-}
-
 function initPageAnimations() {
+  if (AppState.animationsStarted) return;
+  AppState.animationsStarted = true;
   setTimeout(() => {
-    initHeroAnimations();
     initSkillAnimations();
     initTimelineAnimations();
     initProjectAnimations();
@@ -498,134 +413,6 @@ function initPageAnimations() {
     animateStats();
     initParallax();
   }, 300);
-}
-
-function initHeroAnimations() {
-  if (typeof anime === 'undefined') return;
-
-  const heroName = document.getElementById('heroName');
-  if (heroName) {
-    const nameValue = heroName.querySelector('.name-value');
-    if (nameValue) {
-      const originalText = nameValue.textContent;
-      nameValue.textContent = '';
-      anime({
-        targets: { value: 0 },
-        value: originalText.length,
-        duration: 1500,
-        delay: 500,
-        easing: 'easeInOutQuad',
-        update: function (anim) {
-          const length = Math.floor(anim.animatables[0].target.value);
-          nameValue.textContent = originalText.substring(0, length);
-        },
-        complete: () => {
-          const cursor = document.createElement('span');
-          cursor.className = 'name-cursor';
-          cursor.textContent = '|';
-          cursor.style.animation = 'blink 1s infinite';
-          nameValue.appendChild(cursor);
-          setTimeout(() => cursor.remove(), 2000);
-        },
-      });
-    }
-  }
-
-  const heroTitle = document.querySelector('.hero-title');
-  if (heroTitle) {
-    anime({
-      targets: heroTitle,
-      opacity: [0, 1],
-      translateX: [-30, 0],
-      delay: 800,
-      duration: 1000,
-      easing: 'easeOutExpo',
-    });
-  }
-
-  const heroDescription = document.querySelector('.hero-description');
-  if (heroDescription) {
-    anime({
-      targets: heroDescription,
-      opacity: [0, 1],
-      translateY: [20, 0],
-      delay: 1200,
-      duration: 1000,
-      easing: 'easeOutExpo',
-    });
-  }
-
-  const heroButtons = document.querySelectorAll('.hero-buttons .btn');
-  if (heroButtons.length > 0) {
-    anime({
-      targets: heroButtons,
-      opacity: [0, 1],
-      scale: [0.8, 1],
-      delay: anime.stagger(100, { start: 1500 }),
-      duration: 800,
-      easing: 'easeOutBack',
-    });
-  }
-
-  const socialIcons = document.querySelectorAll('.hero-social .social-icon');
-  if (socialIcons.length > 0) {
-    anime({
-      targets: socialIcons,
-      opacity: [0, 1],
-      scale: [0, 1],
-      rotate: [180, 0],
-      delay: anime.stagger(100, { start: 2000 }),
-      duration: 800,
-      easing: 'easeOutBack',
-    });
-  }
-
-  const profileImage = document.getElementById('profileImage');
-  if (profileImage) {
-    anime({
-      targets: profileImage,
-      opacity: [0, 1],
-      scale: [0.8, 1],
-      rotate: [180, 0],
-      delay: 1000,
-      duration: 1500,
-      easing: 'easeOutElastic(1, .8)',
-    });
-
-    profileImage.addEventListener('mouseenter', () => {
-      anime({
-        targets: profileImage,
-        scale: [1, 1.1],
-        rotate: [0, 5],
-        duration: 500,
-        easing: 'easeOutElastic(1, .8)',
-      });
-    });
-
-    profileImage.addEventListener('mouseleave', () => {
-      anime({
-        targets: profileImage,
-        scale: [1.1, 1],
-        rotate: [5, 0],
-        duration: 500,
-        easing: 'easeOutElastic(1, .8)',
-      });
-    });
-  }
-
-  const badges = document.querySelectorAll('.floating-badge');
-  if (badges.length > 0) {
-    badges.forEach((badge, index) => {
-      anime({
-        targets: badge,
-        opacity: [0, 1],
-        scale: [0, 1],
-        delay: 1500 + index * 200,
-        duration: 800,
-        easing: 'easeOutBack',
-      });
-    });
-  }
 }
 
 function initSkillAnimations() {
@@ -705,6 +492,10 @@ function initTimelineAnimations() {
 function initProjectAnimations() {
   const projectCards = document.querySelectorAll('.project-card');
   projectCards.forEach((card, index) => {
+    // Ocultar solo las que aún no se ven, para que no parpadeen al animar
+    if (typeof anime !== 'undefined' && card.getBoundingClientRect().top > window.innerHeight) {
+      card.style.opacity = '0';
+    }
     inView(
       card,
       () => {
@@ -712,11 +503,13 @@ function initProjectAnimations() {
           anime({
             targets: card,
             opacity: [0, 1],
-            translateY: [50, 0],
-            scale: [0.9, 1],
-            delay: index * 100,
-            duration: 1000,
+            translateY: [24, 0],
+            delay: (index % 3) * 80,
+            duration: 700,
             easing: 'easeOutExpo',
+            complete: () => {
+              card.style.transform = '';
+            },
           });
         } else {
           animateElement(
@@ -729,27 +522,6 @@ function initProjectAnimations() {
       { amount: 0.2 }
     );
 
-    card.addEventListener('mouseenter', () => {
-      if (typeof anime !== 'undefined') {
-        anime({
-          targets: card,
-          scale: [1, 1.02],
-          duration: 300,
-          easing: 'easeOutQuad',
-        });
-      }
-    });
-
-    card.addEventListener('mouseleave', () => {
-      if (typeof anime !== 'undefined') {
-        anime({
-          targets: card,
-          scale: [1.02, 1],
-          duration: 300,
-          easing: 'easeOutQuad',
-        });
-      }
-    });
   });
 }
 
@@ -774,7 +546,7 @@ function initScrollAnimations() {
     );
   });
 
-  const cards = document.querySelectorAll('.card, .project-card, .contact-item');
+  const cards = document.querySelectorAll('.card, .contact-item');
   cards.forEach((card, index) => {
     inView(
       card,
@@ -815,7 +587,8 @@ function animateStats() {
             duration: 2000,
             easing: 'easeOutExpo',
             update: function (anim) {
-              stat.textContent = Math.floor(anim.animatables[0].target.value);
+              stat.textContent =
+                Math.floor(anim.animatables[0].target.value) + (stat.getAttribute('data-suffix') || '');
             },
           });
         }
@@ -877,9 +650,7 @@ function bootstrapPortfolio() {
   initializeApp();
   generateParticles();
   runWhenPageReady(() => {
-    setTimeout(() => {
-      initLoaderAnimation();
-    }, 100);
+    initPageAnimations();
   });
 }
 

@@ -39,7 +39,6 @@ Portfolio profesional desarrollado con React y Vite. El proyecto presenta perfil
 - Secciones: About, Skills, Experience, Projects, Contact.
 - Cambio de idioma ES/EN con persistencia en `localStorage`.
 - Cambio de tema dark/light con persistencia en `localStorage`.
-- Loader inicial con progreso animado.
 - Particulas y animaciones de entrada al hacer scroll.
 - Formulario de contacto de demostracion (sin backend).
 - Responsive design para desktop, tablet y mobile.
@@ -66,7 +65,6 @@ Portfolio profesional desarrollado con React y Vite. El proyecto presenta perfil
 |  |  |- ProjectsSection.jsx
 |  |  |- ContactSection.jsx
 |  |  |- Footer.jsx
-|  |  |- Loader.jsx
 |  |  |- ScorpionMark.jsx
 |  |- scripts/
 |  |  |- app.js
