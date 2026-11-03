@@ -17,8 +17,6 @@ const ES_TRANSLATIONS = {
   GitHub: 'GitHub',
   'Scroll Down': 'Desliza hacia abajo',
   'About Me': 'Sobre mí',
-  'I am a Full Stack Developer focused on building and implementing web systems and e-learning platforms using PHP, Laravel, JavaScript, HTML, CSS3, MySQL/MariaDB, WordPress, VTEX and Moodle. I work across development, layout implementation, content and server management, and I apply cybersecurity best practices while continuously strengthening React, Vue.js and Python.':
-    'Soy desarrollador Full Stack, enfocado en construir e implementar sistemas web y plataformas de e-learning con PHP, Laravel, JavaScript, HTML, CSS3, MySQL/MariaDB, WordPress, VTEX y Moodle. Trabajo tanto en desarrollo como en maquetación, contenidos y gestión de servidores, aplicando buenas prácticas de ciberseguridad mientras sigo reforzando React, Vue.js y Python.',
   Email: 'Correo',
   Phone: 'Teléfono',
   'Send Message': 'Enviar mensaje',

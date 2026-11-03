@@ -6,15 +6,17 @@ const JOBS = [
     title: { en: 'Senior Full Stack Developer', es: 'Full Stack Developer Senior' },
     company: 'Grupo La Sal · La Sal Catering',
     description: {
-      en: "Developing and maintaining the group's four websites, from catering and food delivery to leisure bookings, and building internal web applications for invoicing and lead management.",
-      es: 'Desarrollo y mantenimiento de las cuatro webs del grupo, desde catering y delivery hasta reservas de ocio, y creación de aplicaciones web internas para facturación y gestión de leads.',
+      en: "I develop and maintain the group's four websites (catering, food delivery and leisure bookings) and build internal web applications for invoicing and lead management. I bring AI and agents into the daily workflow to automate processes and deliver faster, with special attention to the security of every platform.",
+      es: 'Desarrollo y mantengo las cuatro webs del grupo (catering, delivery y reservas de ocio) y creo aplicaciones web internas de facturación y gestión de leads. Incorporo IA y agentes al trabajo diario para automatizar procesos y entregar más rápido, con especial atención a la seguridad de cada plataforma.',
     },
     achievements: [
       { en: 'Management of 4 production websites', es: 'Gestión de 4 webs en producción' },
       { en: 'Internal web apps for invoicing and leads', es: 'Apps web internas de facturación y leads' },
       { en: 'Booking, payment and ERP integrations', es: 'Integraciones de reservas, pagos y ERP' },
+      { en: 'Process automation with AI and agents', es: 'Automatización de procesos con IA y agentes' },
+      { en: 'Security-first maintenance of every platform', es: 'Mantenimiento de las plataformas con foco en seguridad' },
     ],
-    tags: ['PHP', 'Laravel', 'WordPress', 'WooCommerce', 'React', 'Bókun'],
+    tags: ['PHP', 'Laravel', 'WordPress', 'WooCommerce', 'React', 'Bókun', 'AI agents', 'Security'],
   },
   {
     years: { en: '2022 - 2026', es: '2022 - 2026' },

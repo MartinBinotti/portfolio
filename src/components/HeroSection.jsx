@@ -27,20 +27,21 @@ function HeroSection() {
               <span className="title-prefix">//</span>
               <span
                 className="title-text"
-                data-text-en="Senior Full Stack Developer · PHP, Laravel, React & WordPress"
-                data-text-es="Full Stack Developer Senior · PHP, Laravel, React y WordPress"
+                data-text-en="Senior Full Stack Developer · PHP, WordPress, Astro & React"
+                data-text-es="Full Stack Developer Senior · PHP, WordPress, Astro y React"
               >
-                Full Stack Developer Senior · PHP, Laravel, React y WordPress
+                Full Stack Developer Senior · PHP, WordPress, Astro y React
               </span>
             </div>
 
             <p
               className="hero-description"
-              data-text-en="Based in Mallorca. I build booking sites, e-commerce, internal tools and e-learning platforms for tourism, hospitality and education."
-              data-text-es="Desde Mallorca. Construyo webs de reservas, e-commerce, herramientas internas y plataformas e-learning para turismo, hostelería y educación."
+              data-text-en="Based in Mallorca. I build functional web applications (bookings, e-commerce, internal tools and e-learning), using AI and agents to move fast without compromising security."
+              data-text-es="Desde Mallorca. Desarrollo aplicaciones web funcionales (reservas, e-commerce, herramientas internas y e-learning), apoyándome en IA y agentes para avanzar rápido sin descuidar la seguridad."
             >
-              Desde Mallorca. Construyo webs de reservas, e-commerce, herramientas internas y
-              plataformas e-learning para turismo, hostelería y educación.
+              Desde Mallorca. Desarrollo aplicaciones web funcionales (reservas, e-commerce,
+              herramientas internas y e-learning), apoyándome en IA y agentes para avanzar rápido
+              sin descuidar la seguridad.
             </p>
 
             <div className="hero-buttons">
@@ -120,7 +121,7 @@ function HeroSection() {
                 <i className="fab fa-js"></i>
                 <div className="badge-content">
                   <span className="badge-title">JavaScript</span>
-                  <span className="badge-libs">ES6+, React, Vue</span>
+                  <span className="badge-libs">ES6+, React, Astro</span>
                 </div>
               </div>
             </div>

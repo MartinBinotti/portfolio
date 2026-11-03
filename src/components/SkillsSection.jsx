@@ -3,7 +3,7 @@ const SKILL_GROUPS = [
   {
     icon: 'fas fa-display',
     title: { en: 'Frontend', es: 'Frontend' },
-    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Vue', 'Tailwind', 'SASS', 'HTML / CSS'],
+    items: ['Astro', 'React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind', 'SASS', 'HTML / CSS'],
     usedIn: {
       en: 'Marine Logbook, Studio Architect, Asphalt',
       es: 'Bitácora Marina, Studio Architect, Asphalt',
@@ -28,19 +28,27 @@ const SKILL_GROUPS = [
     },
   },
   {
-    icon: 'fas fa-screwdriver-wrench',
-    title: { en: 'Tools & workflow', es: 'Herramientas' },
-    items: ['Git / GitHub', 'Vite', 'Vercel', 'Composer / NPM', 'Claude Code', 'Cybersecurity'],
+    icon: 'fas fa-shield-halved',
+    title: { en: 'AI & security', es: 'IA y seguridad' },
+    items: ['AI agents', 'Claude Code', 'Automation', 'Cybersecurity', 'Git / GitHub', 'Vite', 'Vercel', 'Composer / NPM'],
     usedIn: {
-      en: 'Every project, from local setup to deployment',
-      es: 'Todos los proyectos, del entorno local al despliegue',
+      en: 'Daily workflow: automation with agents, security reviews and deployment',
+      es: 'El flujo diario: automatización con agentes, revisión de seguridad y despliegue',
     },
   },
 ];
 
+// Chips que cambian de idioma (el resto son nombres propios)
+const CHIP_ES = {
+  'AI agents': 'Agentes de IA',
+  Automation: 'Automatización',
+  Cybersecurity: 'Ciberseguridad',
+};
+
 const WAYS_OF_WORKING = [
   { en: 'Problem solving', es: 'Resolución de problemas' },
   { en: 'Clear communication', es: 'Comunicación clara' },
+  { en: 'Security first', es: 'Seguridad primero' },
   { en: 'Empathy', es: 'Empatía' },
   { en: 'Continuous learning', es: 'Aprendizaje continuo' },
 ];
@@ -74,9 +82,9 @@ function SkillsSection() {
                 <ul className="skill-chips">
                   {group.items.map((item) => (
                     <li className="skill-chip" key={item}>
-                      {item === 'Cybersecurity' ? (
-                        <span data-text-en="Cybersecurity" data-text-es="Ciberseguridad">
-                          Ciberseguridad
+                      {CHIP_ES[item] ? (
+                        <span data-text-en={item} data-text-es={CHIP_ES[item]}>
+                          {CHIP_ES[item]}
                         </span>
                       ) : (
                         item
