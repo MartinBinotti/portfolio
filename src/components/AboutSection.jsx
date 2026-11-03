@@ -29,8 +29,8 @@
 
               <div className="about-stats">
                 <div className="stat-item">
-                  <div className="stat-number" data-count="8" data-suffix="+">
-                    8+
+                  <div className="stat-number" data-count="6" data-suffix="+">
+                    6+
                   </div>
                   <div className="stat-label" data-text-en="Years of experience" data-text-es="Años de experiencia">
                     Años de experiencia
