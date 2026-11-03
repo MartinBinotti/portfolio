@@ -6,7 +6,7 @@ const INITIAL_FORM = {
   from_email: '',
   subject: '',
   message: '',
-  company: '',
+  bot_field: '',
 };
 
 function ContactSection() {
@@ -105,12 +105,24 @@ function ContactSection() {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey || !formRef.current) {
+      console.warn('Contact form: missing EmailJS environment variables');
       setErrorType('config');
       setStatus('error');
       return;
     }
 
-    if (formData.company.trim() !== '' || elapsed < 3000 || cooldownElapsed < 15000) {
+    // Antispam: campo trampa (los navegadores no lo autocompletan por su nombre),
+    // envío demasiado rápido tras cargar la página o reenvío en menos de 15 s.
+    const spamReason =
+      formData.bot_field.trim() !== ''
+        ? 'honeypot'
+        : elapsed < 3000
+          ? 'too-fast'
+          : cooldownElapsed < 15000
+            ? 'cooldown'
+            : '';
+    if (spamReason) {
+      console.warn('Contact form blocked by spam check:', spamReason);
       setErrorType('spam');
       setStatus('error');
       return;
@@ -286,11 +298,13 @@ function ContactSection() {
               <div className="form-group">
                 <input
                   type="text"
-                  name="company"
+                  name="bot_field"
                   className="form-honeypot"
                   tabIndex="-1"
                   autoComplete="off"
-                  value={formData.company}
+                  data-lpignore="true"
+                  data-1p-ignore="true"
+                  value={formData.bot_field}
                   onChange={handleInputChange}
                   aria-hidden="true"
                 />
