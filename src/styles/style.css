@@ -1391,7 +1391,10 @@ img {
 
 .project-links {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
 .project-link {
@@ -1835,6 +1838,11 @@ img {
 }
 
 @media (min-width: 769px) and (max-width: 1242px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
   .nav-container {
     padding: 0.85rem 1.1rem;
   }

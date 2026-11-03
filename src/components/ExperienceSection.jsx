@@ -20,12 +20,64 @@
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
-                  <div className="timeline-year" data-text-en="2022 - Present">
-                    2022 - Present
+                  <div className="timeline-year" data-text-en="2026 - Present">
+                    2026 - Present
                   </div>
                   <div className="timeline-badge" data-text-en="Current">
                     Current
                   </div>
+                </div>
+                <h3 className="timeline-title" data-text-en="Full Stack Developer">
+                  Full Stack Developer
+                </h3>
+                <div className="timeline-company">
+                  <i className="fas fa-building"></i>
+                  Grupo La Sal · La Sal Catering
+                </div>
+                <p
+                  className="timeline-description"
+                  data-text-en="Developing and maintaining the group's four websites, from catering and food delivery to leisure bookings, and building internal web applications for invoicing and lead management."
+                >
+                  Developing and maintaining the group&apos;s four websites, from catering and food
+                  delivery to leisure bookings, and building internal web applications for invoicing
+                  and lead management.
+                </p>
+                <div className="timeline-achievements">
+                  <div className="achievement-item">
+                    <i className="fas fa-check-circle"></i>
+                    <span data-text-en="Management of 4 production websites">
+                      Management of 4 production websites
+                    </span>
+                  </div>
+                  <div className="achievement-item">
+                    <i className="fas fa-check-circle"></i>
+                    <span data-text-en="Internal web apps for invoicing and leads">
+                      Internal web apps for invoicing and leads
+                    </span>
+                  </div>
+                  <div className="achievement-item">
+                    <i className="fas fa-check-circle"></i>
+                    <span data-text-en="Booking, payment and ERP integrations">
+                      Booking, payment and ERP integrations
+                    </span>
+                  </div>
+                </div>
+                <div className="timeline-tags">
+                  <span className="tag">PHP</span>
+                  <span className="tag">Laravel</span>
+                  <span className="tag">Wordpress</span>
+                  <span className="tag">WooCommerce</span>
+                  <span className="tag">React</span>
+                  <span className="tag">Bókun</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <div className="timeline-year">2022 - 2026</div>
                 </div>
                 <h3 className="timeline-title" data-text-en="Senior Full Stack Developer">
                   Senior Full Stack Developer

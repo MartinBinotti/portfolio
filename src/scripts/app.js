@@ -62,6 +62,12 @@ const ES_TRANSLATIONS = {
     'Aplicacion web para gestion de tareas con sincronizacion en tiempo real y diseno moderno.',
   'A modern blog platform with CMS features and beautiful UI design.':
     'Plataforma de blog moderna con funciones CMS y una interfaz cuidada.',
+  '2026 - Present': '2026 - Actualidad',
+  'Developing and maintaining the group\'s four websites, from catering and food delivery to leisure bookings, and building internal web applications for invoicing and lead management.':
+    'Desarrollo y mantenimiento de las cuatro webs del grupo, desde catering y delivery hasta reservas de ocio, y creacion de aplicaciones web internas para facturacion y gestion de leads.',
+  'Management of 4 production websites': 'Gestion de 4 sitios web en produccion',
+  'Internal web apps for invoicing and leads': 'Aplicaciones web internas de facturacion y leads',
+  'Booking, payment and ERP integrations': 'Integraciones de reservas, pagos y ERP',
   Email: 'Correo',
   Phone: 'Telefono',
   Location: 'Ubicacion',

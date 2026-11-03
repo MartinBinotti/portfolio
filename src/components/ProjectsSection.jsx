@@ -61,6 +61,16 @@
                 <div className="project-overlay">
                   <div className="project-links">
                     <a
+                      href="https://arquitectura-estudio.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
+                      <i className="fas fa-external-link-alt"></i>
+                      <span className="project-link-label">Demo</span>
+                    </a>
+                    <a
                       href="https://github.com/MartinBinotti/arquitectura-estudio"
                       target="_blank"
                       rel="noreferrer"
