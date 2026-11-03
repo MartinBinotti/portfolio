@@ -21,6 +21,97 @@
                 <div className="project-overlay">
                   <div className="project-links">
                     <a
+                      href="https://mallorca-marina.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Project"
+                    >
+                      <i className="fas fa-external-link-alt"></i>
+                      <span className="project-link-label">Demo</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="project-placeholder">
+                  <i className="fas fa-fish"></i>
+                </div>
+              </div>
+              <div className="project-content">
+                <h3 className="project-title" data-text-en="Marine Logbook" data-text-es="Bitácora Marina">
+                  Bitácora Marina
+                </h3>
+                <p
+                  className="project-description"
+                  data-text-en="Marine species catalog and snorkeling log for Mallorca: sightings by cove, live sea conditions map, achievements and cross-device sync."
+                  data-text-es="Catálogo de especies marinas y bitácora de snorkel en Mallorca: avistamientos por cala, mapa de condiciones del mar, logros y sincronización entre dispositivos."
+                >
+                  Catálogo de especies marinas y bitácora de snorkel en Mallorca: avistamientos por
+                  cala, mapa de condiciones del mar, logros y sincronización entre dispositivos.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Next.js</span>
+                  <span className="tag">Supabase</span>
+                  <span className="tag">Leaflet</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a
+                      href="https://github.com/MartinBinotti/arquitectura-estudio"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Frontend Code"
+                    >
+                      <i className="fab fa-github"></i>
+                      <span className="project-link-label">Web</span>
+                    </a>
+                    <a
+                      href="https://github.com/MartinBinotti/arquitectura-studio-cms"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View CMS Code"
+                    >
+                      <i className="fab fa-github"></i>
+                      <span className="project-link-label">CMS</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="project-placeholder">
+                  <i className="fas fa-building"></i>
+                </div>
+              </div>
+              <div className="project-content">
+                <h3 className="project-title" data-text-en="Studio Architect" data-text-es="Studio Architect">
+                  Studio Architect
+                </h3>
+                <p
+                  className="project-description"
+                  data-text-en="Architecture studio website in React, powered by a Laravel/Filament CMS that manages projects, categories and galleries through a public API."
+                  data-text-es="Web para un estudio de arquitectura en React, alimentada por un CMS en Laravel/Filament que gestiona proyectos, categorías y galerías mediante una API pública."
+                >
+                  Web para un estudio de arquitectura en React, alimentada por un CMS en
+                  Laravel/Filament que gestiona proyectos, categorías y galerías mediante una API
+                  pública.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">React</span>
+                  <span className="tag">Laravel</span>
+                  <span className="tag">Filament</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a
                       href="https://fashion-designer-steel.vercel.app"
                       target="_blank"
                       rel="noreferrer"
@@ -206,6 +297,105 @@
                   <span className="tag">PHP</span>
                   <span className="tag">Javascript</span>
                   <span className="tag">Moodle</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a
+                      href="https://github.com/MartinBinotti/plugin-moodle-wp"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Code"
+                    >
+                      <i className="fab fa-github"></i>
+                      <span className="project-link-label">Datos</span>
+                    </a>
+                    <a
+                      href="https://github.com/MartinBinotti/plugin-moodle-progreso"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Code"
+                    >
+                      <i className="fab fa-github"></i>
+                      <span className="project-link-label">Progreso</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="project-placeholder">
+                  <i className="fas fa-plug"></i>
+                </div>
+              </div>
+              <div className="project-content">
+                <h3
+                  className="project-title"
+                  data-text-en="Moodle ↔ WordPress Integration"
+                  data-text-es="Integración Moodle ↔ WordPress"
+                >
+                  Integración Moodle ↔ WordPress
+                </h3>
+                <p
+                  className="project-description"
+                  data-text-en="WordPress plugins that read the Moodle database to show each student's classroom, study plan and course progress in their WordPress account, via shortcodes."
+                  data-text-es="Plugins de WordPress que leen la base de datos de Moodle para mostrar en la cuenta de cada alumno su aula, plan de estudios y progreso en los cursos, mediante shortcodes."
+                >
+                  Plugins de WordPress que leen la base de datos de Moodle para mostrar en la cuenta
+                  de cada alumno su aula, plan de estudios y progreso en los cursos, mediante
+                  shortcodes.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">PHP</span>
+                  <span className="tag">WordPress</span>
+                  <span className="tag">Moodle</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <div className="project-overlay">
+                  <div className="project-links">
+                    <a
+                      href="https://github.com/MartinBinotti/asignaci-n-puntos-moodle"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                      title="View Code"
+                    >
+                      <i className="fab fa-github"></i>
+                      <span className="project-link-label">Code</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="project-placeholder">
+                  <i className="fas fa-medal"></i>
+                </div>
+              </div>
+              <div className="project-content">
+                <h3
+                  className="project-title"
+                  data-text-en="Moodle Points Block"
+                  data-text-es="Bloque de Puntajes Moodle"
+                >
+                  Bloque de Puntajes Moodle
+                </h3>
+                <p
+                  className="project-description"
+                  data-text-en="Moodle block plugin that lets teachers assign points to students from the course, with role-based permissions. Complements the student ranking."
+                  data-text-es="Plugin de bloque para Moodle que permite a los docentes asignar puntos a los alumnos desde el curso, con permisos por rol. Complementa el ranking de estudiantes."
+                >
+                  Plugin de bloque para Moodle que permite a los docentes asignar puntos a los
+                  alumnos desde el curso, con permisos por rol. Complementa el ranking de estudiantes.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">PHP</span>
+                  <span className="tag">Moodle</span>
+                  <span className="tag">Plugin</span>
                 </div>
               </div>
             </div>
