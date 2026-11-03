@@ -1,4 +1,5 @@
 ﻿import { useEffect } from 'react';
+import anime from 'animejs/lib/anime.es.js';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -10,24 +11,9 @@ import Footer from './components/Footer';
 
 let appScriptLoaded = false;
 
-function loadExternalScript({ src, id }) {
-  return new Promise((resolve, reject) => {
-    if (id) {
-      const existing = document.getElementById(id);
-      if (existing) {
-        resolve();
-        return;
-      }
-    }
-
-    const script = document.createElement('script');
-    script.src = src;
-    if (id) script.id = id;
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error(`Failed to load ${src}`));
-    document.body.appendChild(script);
-  });
-}
+// anime.js va dentro del bundle (antes se cargaba desde un CDN y, si fallaba, app.js no arrancaba).
+// app.js lo usa como global, por eso se expone en window.
+window.anime = anime;
 
 function App() {
   useEffect(() => {
@@ -41,13 +27,6 @@ function App() {
     document.documentElement.dir = 'ltr';
 
     const bootstrap = async () => {
-      if (!window.anime) {
-        await loadExternalScript({
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js',
-          id: 'animejs-cdn',
-        });
-      }
-
       if (!appScriptLoaded) {
         await import('./scripts/app.js');
         appScriptLoaded = true;
