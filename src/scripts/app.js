@@ -138,6 +138,14 @@ function updateLanguageUI() {
     }
   });
 
+  // Enlaces que cambian de destino según el idioma (CV en español / inglés)
+  document.querySelectorAll('[data-href-en][data-href-es]').forEach((link) => {
+    const lang = AppState.currentLang === 'en' ? 'en' : 'es';
+    link.setAttribute('href', link.getAttribute(`data-href-${lang}`));
+    const fileName = link.getAttribute(`data-download-${lang}`);
+    if (fileName) link.setAttribute('download', fileName);
+  });
+
   const langToggle = document.getElementById('langToggle');
   if (langToggle) {
     const langText = langToggle.querySelector('.lang-text');

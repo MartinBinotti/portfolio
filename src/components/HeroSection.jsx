@@ -1,4 +1,5 @@
-﻿import cvFileSrc from '../assets/cv-martin-binotti.pdf';
+﻿import cvEsSrc from '../assets/cv-martin-binotti.pdf';
+import cvEnSrc from '../assets/cv-martin-binotti-en.pdf';
 import profileImageSrc from '../assets/perfil.webp';
 
 function HeroSection() {
@@ -53,11 +54,34 @@ function HeroSection() {
                 <span data-text-en="View projects" data-text-es="Ver proyectos">Ver proyectos</span>
                 <i className="fas fa-code"></i>
               </a>
-              <a href={cvFileSrc} className="btn btn-tertiary" download="cv-martin-binotti.pdf">
+              <a
+                href={cvEsSrc}
+                className="btn btn-tertiary"
+                download="cv-martin-binotti-es.pdf"
+                data-href-es={cvEsSrc}
+                data-href-en={cvEnSrc}
+                data-download-es="cv-martin-binotti-es.pdf"
+                data-download-en="cv-martin-binotti-en.pdf"
+              >
                 <span data-text-en="Download CV" data-text-es="Descargar CV">Descargar CV</span>
                 <i className="fas fa-download"></i>
               </a>
             </div>
+            <p className="cv-alt">
+              <a
+                href={cvEnSrc}
+                download="cv-martin-binotti-en.pdf"
+                data-href-es={cvEnSrc}
+                data-href-en={cvEsSrc}
+                data-download-es="cv-martin-binotti-en.pdf"
+                data-download-en="cv-martin-binotti-es.pdf"
+              >
+                <i className="fas fa-file-arrow-down" aria-hidden="true"></i>
+                <span data-text-en="Spanish version of the CV" data-text-es="CV también en inglés">
+                  CV también en inglés
+                </span>
+              </a>
+            </p>
 
             <div className="hero-social">
               <a
